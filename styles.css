@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
 }
 
 header {
@@ -18,6 +19,7 @@ header {
 
 header .logo h1 {
   margin: 0;
+  font-size: 1.8rem;
 }
 
 nav ul {
@@ -28,20 +30,35 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* Hero Section */
 .hero {
-  background: url('hero-bg.jpg') no-repeat center center/cover;
-  color: #fff;
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 5rem 1rem;
+  color: #fff;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .hero h2 {
@@ -61,11 +78,22 @@ nav ul li a {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
+.btn:hover {
+  background-color: #e65c00;
+}
+
+/* Product Catalog Section */
 .product-catalog {
   padding: 2rem;
   text-align: center;
+}
+
+.product-catalog h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .product-grid {
@@ -77,16 +105,22 @@ nav ul li a {
 .product-card {
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1rem;
   margin: 1rem;
   width: 200px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
 }
 
 .product-card img {
   max-width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .product-card h3 {
@@ -107,16 +141,37 @@ nav ul li a {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.product-card button:hover {
+  background-color: #555;
+}
+
+/* Shopping Cart Section */
 .shopping-cart {
   padding: 2rem;
   text-align: center;
 }
 
+.shopping-cart h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.shopping-cart .btn {
+  margin-top: 1rem;
+}
+
+/* Checkout Section */
 .checkout {
   padding: 2rem;
   text-align: center;
+}
+
+.checkout h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .checkout form {
@@ -138,6 +193,7 @@ nav ul li a {
   border-radius: 5px;
 }
 
+/* Footer Section */
 footer {
   background-color: #333;
   color: #fff;
@@ -149,4 +205,9 @@ footer {
 footer a {
   color: #ff6600;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #e65c00;
 }
